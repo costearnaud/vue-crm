@@ -1,30 +1,25 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <Header/>
+
+  <div class="ml-4 grid grid-row:3 grid-flow-col gap-4">
+    <div class="row-span-full rounded-md bg-yellow-600 text-white font-semibold items-center py-3 px-6">
+      <Sidebar/>
+    </div>
+    <div class="row-span-full col-span-4 rounded-md border-2 border-yellow-600 py-3 px-6">
+      <router-view/>
+    </div>
   </div>
-  <router-view/>
+
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
 
-#nav {
-  padding: 30px;
+export default {
+  components: {
+    Header,
+    Sidebar
+  }
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
