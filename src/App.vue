@@ -20,6 +20,9 @@ export default {
   components: {
     Header,
     Sidebar
+  },
+  mounted () {
+    // console.log('NODE_ENV :' + process.env.VUE_APP_NODE_ENV)
   }
 }
 </script>

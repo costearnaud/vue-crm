@@ -1,7 +1,9 @@
 import axios from 'axios'
 
-const url = 'http://localhost:5002/customers'
-const urlMeta = 'http://localhost:5002/customers/meta'
+const url = process.env.VUE_APP_BASEURL + '/customers'
+const urlMeta = process.env.VUE_APP_BASEURL + '/customers/meta'
+
+console.log('CustomerService.js URL : ' + url)
 
 class CustomerService {
   // Get Customers Meta
